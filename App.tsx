@@ -1,11 +1,22 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Timer from './components/Timer';
+interface Props {
+  isLoggedIn?: boolean;
+}
 
-export default class App extends Component {
+interface State {
+  isLoggedIn: boolean;
+}
+export default class App extends Component<Props,State> {
+  constructor(props:any){
+    super(props);
+  }
   render(){
     return (
       <View style={styles.container}>
-        <Text>Hello World!!! hey there2</Text>
+        <Text>Hello World!!! hey there0</Text>
+        <Timer/>
       </View>
     );
   }
