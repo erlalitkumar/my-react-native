@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from "react-native";
 interface Props {}
 interface States {
   time: string;
@@ -16,7 +16,7 @@ export default class Timer extends Component<Props, States> {
   render() {
     return (
       <View>
-        <Text>Time : {this.state.time}</Text>
+        <Text>Time: {this.state.time}</Text>
       </View>
     );
   }

@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import Timer from './components/Timer';
+import React, { Component } from "react";
+import { StyleSheet, Text, View, TextInput } from "react-native";
+import Timer from "./components/Timer";
+import AppBar from "./components/AppBar";
 interface Props {
   isLoggedIn?: boolean;
 }
@@ -8,15 +9,15 @@ interface Props {
 interface State {
   isLoggedIn: boolean;
 }
-export default class App extends Component<Props,State> {
-  constructor(props:any){
+export default class App extends Component<Props, State> {
+  constructor(props: any) {
     super(props);
   }
-  render(){
+  render() {
+    console.log("Tag", " I am render method");
     return (
-      <View style={styles.container}>
-        <Text>Hello World!!! hey there0</Text>
-        <Timer/>
+      <View>
+        <AppBar />
       </View>
     );
   }
@@ -25,8 +26,8 @@ export default class App extends Component<Props,State> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center"
+  }
 });
